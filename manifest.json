@@ -1,0 +1,26 @@
+{
+  "name": "YOUTUBE AUTO BOT",
+  "version": "0.1",
+  "manifest_version" : 2,
+  "description": " By -Cyber hermit-",
+  
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "background" : {
+   
+    "scripts" : ["background.js","index.js"]
+  },
+
+  "browser_action": {
+    "default_icon": "icon128.png"
+  },
+  "web_accessible_resources": [
+    "index.html",
+    "index.js"
+],
+  "permissions": ["storage", "*://*.youtube.com/*", "notifications", "tabs", "contextMenus","http://*/" , "webRequest", "webRequestBlocking","cookies"],
+  "content_security_policy": "script-src 'self' https://unpkg.com/  https://gitcdn.github.io/ https://cdnjs.cloudflare.com   https://use.fontawesome.com/ https://cdn.jsdelivr.net https://cdn.datatables.net; object-src 'self'"
+}

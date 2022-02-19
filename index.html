@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>YOUTUBE AUTO BOT COMMENT 2020</title>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/css/mdb.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/select/1.3.1/css/select.dataTables.min.css">
+
+
+    <style>
+        /* img:not(#kill-fake) {
+            border-radius: 50%;
+        } */
+        .vertical-align {
+    display: flex;
+    align-items: center;
+}
+        
+
+        #list_kill img {
+            border-radius: 50%;
+        }
+        #list_kill:not(.badge) {
+            font-size: 0.8em;
+
+        }
+
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .tagsinput,
+        .tagsinput * {
+            box-sizing: border-box
+        }
+
+        .tagsinput {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            background: #fff;
+            font-family: sans-serif;
+            font-size: 14px;
+            line-height: 20px;
+            color: #556270;
+            padding: 10px 5px 0;
+            border: 1px solid #e6e6e6;
+            border-radius: 20px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .tagsinput.focus {
+            border-color: #ccc
+        }
+
+        .tagsinput .tag {
+            position: relative;
+            background: #c22509;
+            display: block;
+            max-width: 100%;
+            word-wrap: break-word;
+            color: #fff;
+            padding: 5px 30px 5px 5px;
+            border-radius: 2px;
+            margin: 0 5px 5px 0
+        }
+
+        .tagsinput .tag .tag-remove {
+            position: absolute;
+            background: 0 0;
+            display: block;
+            width: 30px;
+            height: 30px;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            color: #ff6b6b;
+            line-height: 30px;
+            padding: 0;
+            border: 0
+        }
+
+        .tagsinput .tag .tag-remove:after,
+        .tagsinput .tag .tag-remove:before {
+            background: #ff6b6b;
+            position: absolute;
+            display: block;
+            width: 10px;
+            height: 2px;
+            top: 14px;
+            left: 10px;
+            content: ''
+        }
+
+        .tagsinput .tag .tag-remove:before {
+            -webkit-transform: rotateZ(45deg);
+            transform: rotateZ(45deg)
+        }
+
+        .tagsinput .tag .tag-remove:after {
+            -webkit-transform: rotateZ(-45deg);
+            transform: rotateZ(-45deg)
+        }
+
+        .tagsinput div {
+            -webkit-box-flex: 1;
+            -webkit-flex-grow: 1;
+            -ms-flex-positive: 1;
+            flex-grow: 1
+        }
+
+        .tagsinput div input {
+            background: 0 0;
+            display: block;
+            width: 100%;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 5px;
+            border: 0;
+            margin: 0 5px 5px 0
+        }
+
+        .tagsinput div input.error {
+            color: #ff6b6b
+        }
+
+        .tagsinput div input::-ms-clear {
+            display: none
+        }
+
+        .tagsinput div input::-webkit-input-placeholder {
+            color: #ccc;
+            opacity: 1
+        }
+
+        .tagsinput div input:-moz-placeholder {
+            color: #ccc;
+            opacity: 1
+        }
+
+        .tagsinput div input::-moz-placeholder {
+            color: #ccc;
+            opacity: 1
+        }
+
+        .tagsinput div input:-ms-input-placeholder {
+            color: #ccc;
+            opacity: 1
+        }
+
+
+        label {
+            display: inline-block;
+            margin-bottom: .2rem;
+        }
+
+
+        body {
+            background-image: linear-gradient(to right, #e5dddd, #e5dfdf, #e5e0e0, #e5e2e2, #e5e3e3);
+            color: rgb(27, 11, 34);
+        }
+
+        .card input,
+        .card select {
+
+            background-color: rgba(239, 226, 237, 0.2);
+
+            color: rgb(12, 15, 15);
+        }
+
+        .centerBlock {
+            display: table;
+            margin: auto;
+        }
+
+        label,
+        p {
+            font-size: 0.8em;
+            margin-bottom: 0;
+        }
+
+
+        /* Just common table stuff. Really. */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 8px 16px;
+        }
+
+        th {
+            background-image: linear-gradient(to right, #262727, #212323, #1c1e1e, #171a1a, #121616);
+            color: #f1f1f1;
+        }
+
+        /* width */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #161516;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #070607;
+        }
+
+        h6 {
+            margin: 0;
+            font-size: 0.9em;
+
+        }
+
+        table.display thead:nth-child(1) tr th.select-checkbox.selected::after {
+            content: "✔";
+            margin-top: -11px;
+            margin-left: -4px;
+            text-align: center;
+            text-shadow: rgb(176, 190, 217) 1px 1px, rgb(176, 190, 217) -1px -1px, rgb(176, 190, 217) 1px -1px, rgb(176, 190, 217) -1px 1px;
+        }
+
+
+
+        .card-header {
+
+            background-image: linear-gradient(to right, #262727, #212323, #1c1e1e, #171a1a, #121616);
+            color: #f1f1f1;
+
+        }
+        .card-body{
+            background-image: linear-gradient(to right, #e5dddd, #e5dfdf, #e5e0e0, #e5e2e2, #e5e3e3);
+
+        }
+
+        .card {
+            /* background-image: linear-gradient(to right top, #33b1c4, #2cb6c8, #24bccb, #1ac1ce, #0bc7d1); */
+
+            background-color: #f9f9f9;
+
+        }
+
+        .pagination .page-item.active .page-link {
+            transition: all .2s linear;
+            border-radius: .125rem;
+            background-color: #ff3547;
+            color: #fff;
+        }
+
+        table.dataTable tbody>tr.selected,
+        table.dataTable tbody>tr>.selected,
+        table.dataTable.display tbody>tr.even.selected>.sorting_1,
+        table.dataTable.order-column.stripe tbody>tr.even.selected>.sorting_1 {
+            background-color: #ad6e71;
+        }
+
+        table.dataTable.stripe tbody>tr.odd.selected,
+        table.dataTable.stripe tbody>tr.odd>.selected,
+        table.dataTable.display tbody>tr.odd.selected,
+        table.dataTable.display tbody>tr.odd>.selected,
+        table.dataTable.display tbody>tr.odd.selected>.sorting_1,
+        table.dataTable.order-column.stripe tbody>tr.odd.selected>.sorting_1,
+        table.dataTable tbody>tr.selected,
+        table.dataTable tbody>tr>.selected {
+            background-color: #ad6e71;
+        }
+        .row {
+  display: flex;
+  align-items: center;
+}
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="container-fluid" style="margin-top: 1%;">
+
+        <div class="mx-auto">
+
+            <!-- ta -->
+
+            <div class="form-row align-items-center ">
+
+                <div class="col-5">
+
+                    <div class="card mx-0 h-100" style="min-height: 95vh;">
+                        <!-- <div class="card-header ">
+
+
+
+                        </div> -->
+
+                        <div class="card-body">
+                            <div class="row mb-2 ">
+
+                                <div class="col-9">
+                               
+                                    <input class="" id="form-tags-1" name="tags-1" type="text" value="">
+
+                                </div>
+                                <div class="col-3">
+
+
+                                    <button type="button" class="btn cloudy-knoxville-gradient
+                    
+                    btn-responsive  waves-effect mx-auto  m-0" id="kill188"
+                                        style="width:100%; border-width: 3px; border-color: #c9e939;  border-radius: 20px;">
+                                        FIND
+
+                                    </button>
+
+                                </div>
+
+
+                            </div>
+
+
+                            <table id="table_id" class="display">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>COVER</th>
+                                        <th>CHANNEL</th>
+                                        <th>VIEW</th>
+                                        <th>TIME</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                </tbody>
+
+                            </table>
+
+
+
+
+
+                            <div class="form-row align-items-center mt-3">
+                                <div class="col-6">
+                                    <div class="centerBlock">
+                                        <p>VIDEO : <span class="badge badge-success " id="pg_all"> 0 </span> </p>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="col-6">
+                                    <div class="centerBlock">
+                                        <p>SELECTED : <span class="badge badge-dark " id="sl_all"> 0 </span> </p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+                <div class="col-7">
+
+                    <div class="card mx-0 h-100" style="min-height: 95vh; ">
+                        <!-- <div class="card-header ">
+                            <div class="form-row align-items-center">
+
+
+
+
+
+
+                            </div>
+
+
+                        </div> -->
+
+                        <div class="card-body pb-0">
+
+                            <div class="card mx-0 ">
+                                <div class="card-header p-2">
+                                    <div class="form-row  vertical-align">
+
+                                        <div class="col-6">
+
+
+                                            <div class="custom-control custom-radio custom-control-inline"
+                                                data-toggle="tooltip" data-placement="top" title="Use normal name ">
+                                                <input type="radio" id="customRadioInline1" name="customRadioInline1"
+                                                    class="custom-control-input" value="nm-nr" checked>
+                                                <label class="custom-control-label"
+                                                    for="customRadioInline1">RANDOM </label>
+                                            </div>
+                                          
+                                            <div class="custom-control custom-radio custom-control-inline"
+                                                data-toggle="tooltip" data-placement="top"
+                                                title="Random number after your name EX: TOM & JERRY 11111">
+                                                <input type="radio" id="customRadioInline3" name="customRadioInline1"
+                                                    value="nm-ran" class="custom-control-input">
+                                                <label class="custom-control-label"
+                                                    for="customRadioInline3">LIST</label>
+                                            </div>
+
+
+                                        </div>
+                                        
+                                        <div class="col-6">
+                                            <button type="button" class="btn young-passion-gradient
+                                            btn-sm mt-1 float-right"
+                                                id="lc-go">
+                                                CLEAR</button>
+                                        </div>
+
+
+
+                                    </div>
+
+
+
+
+                                </div>
+
+
+                                <!-- kkkk -->
+                                <div class="card-body p-1">
+
+                                    <div id="nm-nr">
+                                        <div class="row mt-2 ">
+                                            <div class="col-2">
+
+
+                                                <button type="button" class="btn ripe-malinka-gradient btn-responsive  waves-effect mx-auto  m-0" id="kill_ch"
+                                                    style="width:100%; border-width: 3px; border-color: #c9e939;  border-radius: 20px;">
+                                                    CH NAME
+
+                                                </button>
+
+                                            </div>
+
+                                            <div class="col-10">
+
+                                                <input class="" id="form-tags-6" name="tags-1" type="text"
+                                                    value="Nice!! video, Cool !! keep going,Can we be friend?,I like your video,I looking for your next video,This is intersting,Good content">
+
+                                            </div>
+
+
+
+                                        </div>
+                                    </div>
+                                  
+
+                                    <div id="nm-ran" style="display: none; ">
+                                        <div class="custom-file mt-2">
+                                            <input type="file" class="custom-file-input text" id="file">
+                                            <label class="custom-file-label" for="file">Choose file</label>
+                                        </div>
+                                        <div class="form-group">
+
+                                            <textarea class="form-control" id="exampleFormControlTextarea1"
+                                                rows="5"></textarea>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="card mx-0 mt-2">
+                                <div class="card-header ">
+
+                                    <i class="fas fa-cogs"></i>&nbsp; SETTING
+
+                                </div>
+
+                                <!-- kkkk -->
+                                <div class="card-body p-2">
+                                    <div class="row mt-0 p-0 ">
+                                        <div class="col-4">
+
+                                            <div class="card mx-0 ">
+                                                <div class="card-header p-1">
+                                                  <p>  <i class="fas fa-hourglass-half ml-2">  </i>  &nbsp;&nbsp;DELAY (SEC)</p> 
+                                                </div>
+                                                <div class="card-body">
+
+                                                    <div class="form-row align-items-center">
+
+
+
+                                                        <div class="col-6">
+                    
+                    
+                                                            <input type="number" class="form-control form-control-sm mb-2" id="min-delay"
+                                                                placeholder="" value="30" data-toggle="tooltip" data-placement="top"
+                                                                title="Min delay">
+                                                        </div>
+                    
+                                                        <div class="col-6">
+                    
+                                                            <input type="number" class="form-control form-control-sm mb-2" id="max-delay"
+                                                                placeholder="" value="40" data-toggle="tooltip" data-placement="top"
+                                                                title="Max delay">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="card mx-0 ">
+                                                <div class="card-header p-1">
+                                                    <p><i class="fas fa-stopwatch"></i> &nbsp;&nbsp; LIMIT </p>
+                                                </div>
+                                                <div class="card-body">
+
+                                                    <div class="form-row align-items-center">
+
+
+
+                                                        <div class="col-12">
+                    
+                    
+                                                            <input type="number" class="form-control form-control-sm mb-2" id="shared-limit"
+                                                                placeholder="" value="40" data-toggle="tooltip" data-placement="top"
+                                                                title="Stop when reach this limit">
+                                                        </div>
+                    
+                    
+                                                    </div>
+                    
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-4">
+                                            <div class="text-center">
+                                            <button type="button" class="btn  dusty-grass-gradient btn-lg  w-95" style="height: 100%;" id="stt"><i class="fas fa-robot"></i> &nbsp; &nbsp;START BOT</button>
+                                            <button type="button" class="btn  young-passion-gradient w-95" style="height: 100%; display: none;" id="sto"><i class="fas fa-stop-circle"></i>&nbsp; &nbsp;STOP BOT</button>
+                                        </div>
+
+                                        </div>
+
+
+                                    </div>
+                                    <!-- row -->
+
+
+
+
+                                </div>
+
+
+
+                            </div>
+<!-- hh -->
+
+
+<div class="card mx-0 mt-2">
+    <div class="card-header ">
+
+        <div class="form-row vertical-align ">
+
+            <div class="col-6">
+              
+              
+
+
+                <i class="fas fa-flag-checkered"></i>&nbsp; REPORT(s)
+            
+
+            </div>
+            
+            <div class="col-6">
+                <button type="button" class="btn young-passion-gradient
+                btn-sm mt-1 float-right"
+                    id="cl-lt">
+                    CLEAR</button>
+            </div>
+
+
+
+        </div>
+
+       
+
+    </div>
+
+    <!-- kkkk -->
+    <div class="card-body p-2">
+
+        <ul class="list-group" style="height: 30vh;  overflow-y: scroll;   overflow-x: hidden;" id="list_kill">
+           
+          </ul>
+      
+
+
+    </div>
+
+
+
+</div>
+
+
+<div class="text-center mt-3">
+<div class="form-row align-items-center">
+
+                   
+
+    <div class="col-4">
+
+
+        <a href="https://www.youtube.com/user/TheNigpo/videos?view_as=subscriber"
+        target="_blank"> <button type="button" class="btn btn-sm btn-danger  "
+            id="yt-btn">
+            <i class="fab fa-youtube"></i>VIDEO</button>
+
+    </a>
+
+    </div>
+    <div class="col-4">
+        <span class="badge badge-dark mx-auto">© 2020 Copyright :
+            <a href="https://96like.blogspot.com/2009/09/cyber-hermit.html"
+                target="_blank" style=" color: #7acbdc; font-size: 12px; "> ~Cyber
+                Hermit~</a> &nbsp;[ Free tool not for sale !!]</span>
+
+
+    </div>
+
+    <div class="col-4">
+
+
+        <a href="https://www.facebook.com/groups/607474146777284/" target="_blank">
+            <button type="button" class="btn  btn-sm btn-info  " id="fb-btn">
+                <i class="fab fa-facebook-square"></i>GROUP</button>
+
+        </a>
+    </div>
+
+
+
+</div>
+</div>
+
+
+                        </div>
+
+
+
+
+
+
+                    </div>
+                    <!-- ..6555 -->
+
+              
+
+                </div>
+            </div>
+
+            <!-- ...ccccccccccccccc -->
+
+
+
+
+
+        </div>
+
+        <!-- end row -->
+    </div>
+
+    <!-- end mx -->
+    </div>
+
+    <!-- end con -->
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js">
+</script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
+
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js">
+</script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js">
+</script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/select/1.3.1/js/dataTables.select.min.js">
+</script>
+
+
+
+
+
+
+<script src="/index.js"></script>
+<script src="/tag.js"></script>
+
+</html>
